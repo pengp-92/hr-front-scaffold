@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-# hr-front-scaffold
-昊润前端脚手架框架
-=======
 # 基于vuejs单页面管理后台应用
-
 
 > 参考资料
 nodesjs package.json
@@ -237,4 +232,3 @@ chrome devtools
 ## eslint
 基于VUE的规则：https://blog.csdn.net/qq_30817073/article/details/78043553
 普通JS规则：http://eslint.cn/
->>>>>>> 08148bdd92da9a808a14a2632107670cf8ac9a00
