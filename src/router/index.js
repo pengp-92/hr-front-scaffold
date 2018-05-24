@@ -90,6 +90,11 @@ export default new Router({
           path: 'progress',
           name: 'progress组件',
           component: () => import('@/views/progress')
+        },
+        {
+          path: 'orgList',
+          name: '组织管理',
+          component: () => import('@/views/org/orgList')
         }
       ]
     },

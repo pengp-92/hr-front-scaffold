@@ -60,6 +60,9 @@
         <el-menu-item index="progress">
           <i class="el-icon-share"></i>进度条
         </el-menu-item>
+        <el-menu-item index="orgList">
+          <i class="el-icon-share"></i>组织管理
+        </el-menu-item>
       </el-menu>
     </div>
   </aside>

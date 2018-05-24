@@ -111,3 +111,16 @@ header::after {
     color: #409eff;
   }
 }
+
+// 下面是重写element-ui table的样式
+// 列表顶部按钮区域
+.table-header-button {
+  height: 50px;
+  text-align: right;
+}
+
+.el-table th {
+    background-color: #f5f7f8;
+    font-weight: bold;
+    color: #333333;
+}
