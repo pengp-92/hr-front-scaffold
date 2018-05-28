@@ -40,7 +40,7 @@
   height: 100%;
   margin-top: 100px;
   color: #333;
-  text-align: center;
+  // text-align: center;
   padding: 0;
 }
 

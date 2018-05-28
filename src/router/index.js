@@ -27,6 +27,31 @@ export default new Router({
           component: () => import('@/views/addUser')
         },
         {
+          path: 'carInfo',
+          name: '车辆信息',
+          component: () => import('@/views/carInfo/carInfo')
+        },
+        {
+          path: 'carInfoRadio',
+          name: '车辆信息单选',
+          component: () => import('@/views/carInfoRadio/carInfo')
+        },
+        {
+          path: 'text',
+          name: '测试控件',
+          component: () => import('@/views/carInfo/text')
+        },
+        {
+          path: 'files',
+          name: '档案配置',
+          component: () => import('@/views/files/filesList')
+        },
+        {
+          path: 'copy',
+          name: '模仿',
+          component: () => import('@/views/copy/index')
+        },
+        {
           path: 'pictable',
           name: '工作台',
           component: () => import('@/views/pictable')

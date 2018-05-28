@@ -20,6 +20,11 @@
           </template>
           <el-menu-item index="userList">用户列表</el-menu-item>
           <el-menu-item index="addUser">添加用户</el-menu-item>
+          <el-menu-item index="carInfo">车辆信息</el-menu-item>
+          <el-menu-item index="carInfoRadio">车辆信息单选</el-menu-item>
+          <el-menu-item index="text">测试控件</el-menu-item>
+          <el-menu-item index="files">档案配置</el-menu-item>
+          <!-- <el-menu-item index="copy">模仿</el-menu-item> -->
         </el-submenu>
         <el-menu-item index="pictable">
           <i class="el-icon-picture"></i>工作台

@@ -1,4 +1,4 @@
 {
-  "IS_CLOSE_ALL_MOCK":false,
+  "IS_CLOSE_ALL_MOCK":true,
   "/api/demo":true
 }
