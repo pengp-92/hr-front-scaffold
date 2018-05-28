@@ -4,109 +4,133 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  routes: [
-    {
+  routes: [{
       path: '/index',
       name: '欢迎',
-      component: () => import('@/views/welcome'), // ()=> 动态导入
+      component: () =>
+        import ('@/views/welcome'), // ()=> 动态导入
     },
     {
       path: '/',
       name: '首页',
-      redirect:'/index',
-      component: () => import('@/views/index'),
-      children: [
-        {
+      redirect: '/index',
+      component: () =>
+        import ('@/views/index'),
+      children: [{
           path: 'userList',
           name: '用户列表',
-          component: () => import('@/views/userList')
+          component: () =>
+            import ('@/views/userList')
         },
         {
           path: 'addUser',
           name: '添加用户',
-          component: () => import('@/views/addUser')
+          component: () =>
+            import ('@/views/addUser')
         },
         {
           path: 'pictable',
           name: '工作台',
-          component: () => import('@/views/pictable')
+          component: () =>
+            import ('@/views/pictable')
         },
         {
           path: 'button',
           name: '按钮组件',
-          component: () => import('@/views/button')
+          component: () =>
+            import ('@/views/button')
         },
         {
           path: 'form',
           name: '表单合集',
-          component: () => import('@/views/form')
+          component: () =>
+            import ('@/views/form')
         },
         {
           path: 'help',
           name: '帮助中心',
-          component: () => import('@/views/help')
+          component: () =>
+            import ('@/views/help')
         },
         {
           path: 'switch',
           name: '切换组件',
-          component: () => import('@/views/switch')
+          component: () =>
+            import ('@/views/switch')
         },
         {
           path: 'slider',
           name: '滑块组件',
-          component: () => import('@/views/slider')
+          component: () =>
+            import ('@/views/slider')
         },
         {
           path: 'picker',
           name: '选择器组件',
-          component: () => import('@/views/picker')
+          component: () =>
+            import ('@/views/picker')
         },
         {
           path: 'upload',
           name: '上传组件',
-          component: () => import('@/views/upload')
+          component: () =>
+            import ('@/views/upload')
         },
         {
           path: 'rate',
           name: '评分组件',
-          component: () => import('@/views/rate')
+          component: () =>
+            import ('@/views/rate')
         },
         {
           path: 'transfer',
           name: '穿梭组件',
-          component: () => import('@/views/transfer')
+          component: () =>
+            import ('@/views/transfer')
         },
         {
           path: 'table',
           name: '表格组件',
-          component: () => import('@/views/table')
+          component: () =>
+            import ('@/views/table')
         },
         {
           path: 'tag',
           name: 'tag组件',
-          component: () => import('@/views/tag')
+          component: () =>
+            import ('@/views/tag')
         },
         {
           path: 'progress',
           name: 'progress组件',
-          component: () => import('@/views/progress')
+          component: () =>
+            import ('@/views/progress')
         },
         {
           path: 'orgList',
           name: '组织管理',
-          component: () => import('@/views/org/orgList')
+          component: () =>
+            import ('@/views/org')
+        },
+        {
+          path: 'orgAdd',
+          name: '添加组织',
+          component: () =>
+            import ('@/views/org/add')
         }
       ]
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/login')
+      component: () =>
+        import ('@/views/login')
     },
     {
       path: '*',
       name: 'not Found',
-      component: () => import('@/views/notfound') // 404 页面
+      component: () =>
+        import ('@/views/notfound') // 404 页面
     },
   ]
 })

@@ -9,6 +9,7 @@ import './styles/index.scss';
 import axios from 'axios';
 import store from './store';
 import './router/beforeEach.js';
+import globalStyleHelper from "@/util/globalStyleHelper.js";
 require('es6-promise').polyfill();
 
 Vue.use(Element, {
@@ -27,5 +28,13 @@ new Vue({
   template: '<App/>',
   components: {
     App
+  },
+  created() {
+    // 初始界面颜色 TO-DO 从后台获取
+    const globalColor = '#2dc3e8';
+    // 将主题颜色保存在全局变量中
+    this.$store.commit("SET_COLOR", globalColor);
+    // 改变无法通过变量改变的全局样式
+    globalStyleHelper.setGlobalStyle(globalColor);
   }
 });

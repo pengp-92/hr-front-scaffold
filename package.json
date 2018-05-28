@@ -10,6 +10,7 @@
     "cre": "node template"
   },
   "dependencies": {
+    "accounting": "^0.4.1",
     "axios": "^0.16.2",
     "blob-util": "^1.3.0",
     "css-color-function": "^1.3.3",

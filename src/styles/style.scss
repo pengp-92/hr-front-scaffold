@@ -1,9 +1,10 @@
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei',SimSun,sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
 }
 
 * {
@@ -115,12 +116,94 @@ header::after {
 // 下面是重写element-ui table的样式
 // 列表顶部按钮区域
 .table-header-button {
-  height: 50px;
+  min-height: 30px;
+  height: auto;
   text-align: right;
+  margin-bottom: 5px;
 }
 
-.el-table th {
+// 列表顶部筛选区域
+.table-header-filter {
+  min-height: 50px;
+  padding: 15px 5px 5px 5px;
+  .el-form-item {
+    width: 100%;
+  }
+  ;
+}
+
+// 表格表头
+.el-table {
+  th {
     background-color: #f5f7f8;
     font-weight: bold;
     color: #333333;
+  }
+  ;
+}
+
+// 分页区域样式
+.el-pagination {
+  margin-top: 10px;
+  text-align: right;
+}
+
+// 表格脚
+.el-table__footer {
+  td {
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    .cell {
+      color: #f56c6c;
+    }
+  }
+}
+
+// 按钮左边距
+.margin-left-mini {
+  margin-left: 20px;
+}
+
+// 显示隐藏的动画
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+// 对话框
+.dialog-self {
+  width: 40%;
+  .el-dialog__header {
+    text-align: left !important;
+  }
+  ;
+  .pull-right {
+    text-align: right;
+  }
+  ;
+  .el-dialog__body {
+    padding-bottom: 1px !important;
+  }
+  ;
+  .el-form {
+    text-align: left;
+    .is-disabled {
+      * {
+        border: none;
+        background-color: transparent;
+        color: #000000;
+        cursor: text;
+      }
+      ;
+      .el-input__suffix {
+        display: none;
+      }
+    }
+  }
 }
