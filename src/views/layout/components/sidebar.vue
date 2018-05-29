@@ -3,7 +3,7 @@
     :class="isCollapse ? 'sidebar-collapse':''"
     :style="{ 'background-color': primaryColor }">
     <div class="main-sidebar-title">
-      <router-link to="/index">后台管理工具</router-link>
+      TMS管理系统
     </div>
     <div class="sidebar-menu">
         <el-menu :default-active="$route.path"
@@ -64,6 +64,9 @@
         </el-menu-item>
         <el-menu-item index="progress">
           <i class="el-icon-share"></i>进度条
+        </el-menu-item>
+        <el-menu-item index="/orgList">
+          <i class="el-icon-share"></i>组织管理
         </el-menu-item>
       </el-menu>
     </div>

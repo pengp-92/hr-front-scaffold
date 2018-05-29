@@ -1,0 +1,19 @@
+{
+  "message": "ok",
+  "data": {
+    "orgId": "ff80808161df84de0161e08fdd7700dc",
+    "orgCode": "ORG20180424163553234",
+    "orgName": "北京组织",
+    "corpId": "4028ba5256d1b2a8015707a1b66e20dc",
+    "corpName": "云尚助力",
+    "orgOwner": "2",
+    "orgTel": "18200000010",
+    "idCard": "500103197802134221",
+    "memberId": "ff80808160b485460161e08fdd200015",
+    "memberName": null,
+    "stlFee": "0",
+    "orgStatus": 1,
+    "orgStatusStr": "停用"
+  },
+  "success": true
+}

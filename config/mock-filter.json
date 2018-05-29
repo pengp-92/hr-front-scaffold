@@ -1,4 +1,5 @@
 {
   "IS_CLOSE_ALL_MOCK":true,
-  "/api/demo":true
+  "/api/demo":true,
+  "org/list": false
 }

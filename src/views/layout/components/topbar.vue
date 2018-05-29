@@ -35,7 +35,7 @@
             </el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-      <div class="topbar-tit">hi {{user.username}},欢迎使用后台管理系统</div>
+      <div class="topbar-tit">hi {{user.username}}，欢迎使用后台管理系统</div>
       <ul class="header-operations">
         <li>
           <el-tooltip effect="dark" content="全屏" placement="bottom">
@@ -49,6 +49,55 @@
       </ul>
     </div>
 </template>
+
+<script>
+import Hamburger from "@/components/Hamburger";
+import screenfull from "@/components/screenfull";
+import globalStyleHelper from "@/util/globalStyleHelper.js";
+
+export default {
+  name: "app",
+  data() {
+    return {
+      user: {
+        id: 2,
+        username: "kassing",
+        password: "Aaaaaaa",
+        avatar:
+          "../../../../static/avatar.jpg",
+        name: "kassing"
+      }
+    };
+  },
+  components: {
+    Hamburger,
+    screenfull
+  },
+  computed: {
+    primaryColor: {
+      get() {
+        return this.$store.state.app.primaryColor;
+      },
+      set(value) {
+        // 将主题颜色保存在全局变量中
+        this.$store.commit("SET_COLOR", value);
+
+        // 改变无法通过变量改变的全局样式
+        globalStyleHelper.setGlobalStyle(value);
+      }
+    },
+    isCollapse() {
+      return !this.$store.state.app.sidebar.opened;
+    }
+  },
+  methods: {
+    toggleSideBar() {
+      this.$store.dispatch("toggleSideBar");
+    }
+  }
+};
+</script>
+
 <style lang="less" scoped>
 .topbar-wrap {
   height: 60px;
@@ -98,57 +147,4 @@
   float: left !important;
 }
 </style>
-
-<script>
-import Hamburger from "@/components/Hamburger";
-import screenfull from "@/components/screenfull";
-import $ from "jquery";
-export default {
-  name: "app",
-
-  data() {
-    return {
-      user: {
-        id: 2,
-        username: "kassing",
-        password: "Aaaaaaa",
-        avatar:
-          "https://raw.githubusercontent.com/taylorchen709/markdown-images/master/vueadmin/user.png",
-        name: "kassing"
-      }
-    };
-  },
-  components: {
-    Hamburger,
-    screenfull
-  },
-  computed: {
-    primaryColor: {
-      get() {
-        return this.$store.state.app.primaryColor;
-      },
-      set(value) {
-        $("#docs-style").html(this.docsStyle(value));
-        this.$store.commit("SET_COLOR", value);
-      }
-    },
-    isCollapse() {
-      return !this.$store.state.app.sidebar.opened;
-    }
-  },
-  methods: {
-    docsStyle(value) {
-      // 动态添加样式
-      return `
-        .el-tabs--border-card>.el-tabs__header .el-tabs__item.is-active{
-          color: ${value} !important;
-        }
-        `;
-    },
-    toggleSideBar() {
-      this.$store.dispatch("toggleSideBar");
-    }
-  }
-};
-</script>
 

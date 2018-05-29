@@ -22,7 +22,8 @@ module.exports = merge(baseWebpackConfig, {
     rules: utils.styleLoaders({ sourceMap: config.dev.cssSourceMap, usePostCSS: true })
   },
   // 打包规则 详细查看https://www.webpackjs.com/configuration/devtool/#devtool
-  devtool: '#cheap-module-eval-source-map',
+  // devtool: '#cheap-module-eval-source-map',
+  devtool: '#source-map',
   plugins: [
     // webpack插件
     new webpack.DefinePlugin({
